@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
+  body {
+    @apply min-h-full font-sans text-brand-black antialiased bg-brand-white;
+  }
+
+  app-root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
+
+@layer utilities {
+  .pb-mobile-bar {
+    @apply pb-20 md:pb-0;
+  }
+}
